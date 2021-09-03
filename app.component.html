@@ -1,0 +1,42 @@
+<div><h1>......hello from angular.......</h1></div>
+
+<div>============interpolation===============================</div>
+
+<h1>(1)hello word from {{title}}</h1>
+<h1>(2)this is {{pageTitle()}}</h1>
+
+
+<div>======================property binding==================</div>
+<input type="text" placeholder="type u email" [value]="defaultEmail">
+<div>===================class binding=========================</div>
+<!-- <p [class]='styleClass'>hello words of p</p> -->
+<p [class.Header]='isHeader' [class.bold]='isHeader' [class.italic]='!isHeader'>hello words of p</p>
+<!-- <p [ngClass]="{Header:isHeader,
+bold:isHeader,
+italic:!isHeader}">hello word from ngClass</p> -->
+<p [ngClass]="headerClass()">class binding</p>
+
+<div>===================style binding===========================</div>
+
+<p [style.fontSize]="isHeader ? 'xxx-large' : 'xx-large'"> single style binding</p>
+<!-- <p [ngStyle]="{
+    color : isHeader? 'red':'green',
+    fontWeight : isHeader? 'bold':'2rem'
+}"> multi style binding</p> -->
+<p [ngStyle]="proStyle()"> multi style binding</p>
+
+<div>=============event binding==================================</div>
+
+<button (click)="toggelHeaderState()">toggle header state</button>
+<div>===============================</div>
+        <div>=====task age====</div>
+<div>===============================</div>
+
+ <label>year Now</label>
+<input  [(ngModel)]="yearNow" type="number" placeholder="year now" >
+<label>year of birth</label>
+<input  [(ngModel)]="yearOfBirth" type="number" placeholder="year of birth">
+ 
+
+<button  (click)="calcAge()">calc.your age</button>
+<h1> You Have : {{result}} years</h1> -->
